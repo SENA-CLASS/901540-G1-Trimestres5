@@ -10,3 +10,22 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/java/log4j/EjemploLOG4j/nbproject/private/
+/java/log4j/EjemploLOG4j/build/
+/java/log4j/EjemploLOG4j/dist/
+/java/log4j/EjemploLog4jMaven/target/
+/java/log4j/EjemploLOG4j2/target/
+/java/log4j/WebApplication1/nbproject/private/
+/java/log4j/WebApplication1/build/
+/java/log4j/EjemploLog4j3/nbproject/private/
+/java/log4j/EjemploLog4j3/build/
+/javaweb/Proyecto/build/
+/javaweb/Proyecto/nbproject/private/
+/javaweb/Proyecto/dist/
+/java/log4j/EjemploLOG4jJPA/nbproject/private/
+/java/log4j/EjemploLOG4jJPA/build/
+/java/log4j/EjemploLOG4jJPA/dist/
+/java/log4j/EjemploJSON/nbproject/private/
+/java/log4j/EjemploJSON/build/
+/java/servlets/Ejemplo1/nbproject/private/
+/java/servlets/Ejemplo1/build/

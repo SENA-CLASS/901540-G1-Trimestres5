@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" name="MyApp"  >
+    
+    <Appenders>
+        <Console name="STDOUT" >
+            <PatternLayout pattern="%d{dd MMM yyyy HH:mm:ss,SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <File name="MyFile" fileName="logs/app.log">
+            <PatternLayout>
+                <Pattern>%d{dd MMM yyyy HH:mm:ss,SSS} [%t] %-5level %logger{36} - %msg%n</Pattern>
+            </PatternLayout>
+        </File>
+        <Async name="Async">
+            <AppenderRef ref="MyFile"/>
+        </Async>
+    </Appenders>
+    <Loggers>
+        <Root level="error">
+            <AppenderRef ref="Async"/>
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </Loggers>
+</Configuration>

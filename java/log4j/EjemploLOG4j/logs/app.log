@@ -1,0 +1,11 @@
+2016-04-13 15:23:51,347 ERROR e.c.s.e.p.Bar [main] Did it again!
+2016-04-13 15:23:51,347 ERROR e.c.s.e.p.EjemploLOG4j [main] Didn't do it.
+2016-04-13 15:29:15,715 FATAL e.c.s.e.s.NewMain [main] esto es un error fatal
+2016-04-13 15:29:15,715 ERROR e.c.s.e.s.NewMain [main] esto es un error
+2016-04-13 15:39:22,461 ERROR e.c.s.e.p.Bar [main] / by zero
+15:40:54.529 [main] ERROR edu.co.sena.ejemplolog4j.primer.Bar - / by zero
+13 abr 2016 15:43:49,878 [main] ERROR edu.co.sena.ejemplolog4j.primer.Bar - / by zero
+13 abr 2016 15:45:19,635 [main] ERROR edu.co.sena.ejemplo4j.tercer.Ejemplo - / by zero
+13 abr 2016 17:02:32,746 [main] ERROR edu.co.sena.ejemplo4j.tercer.Ejemplo - / by zero
+13 abr 2016 17:03:22,850 [main] ERROR edu.co.sena.ejemplo4j.tercer.Ejemplo - / by zero
+13 abr 2016 17:04:20,300 [main] ERROR edu.co.sena.ejemplo4j.tercer.Ejemplo - For input string: "jsdfasd"
