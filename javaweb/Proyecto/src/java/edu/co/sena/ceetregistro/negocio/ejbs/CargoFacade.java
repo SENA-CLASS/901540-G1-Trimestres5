@@ -18,6 +18,7 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class CargoFacade extends AbstractFacade<Cargo> {
 
+    
     @PersistenceContext(unitName = "ProyectoPU")
     private EntityManager em;
 
@@ -35,10 +36,13 @@ public class CargoFacade extends AbstractFacade<Cargo> {
         
     }
     public List<Cargo> findByLikeIdCargo(String idcargo){
-        return getEntityManager().createNamedQuery("Cargo.findByLikeIdCargo")
+        
+            return getEntityManager().createNamedQuery("Cargo.findByLikeIdCargo")
                 .setParameter("idCargo", idcargo)
                 .getResultList()
                 ;
+       
+        
         
     }
 

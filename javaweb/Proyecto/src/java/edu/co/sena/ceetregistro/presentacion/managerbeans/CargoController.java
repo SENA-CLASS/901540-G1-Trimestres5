@@ -27,8 +27,10 @@ public class CargoController implements Serializable {
 
     @EJB
     private edu.co.sena.ceetregistro.negocio.ejbs.CargoFacade ejbFacade;
+    
     @EJB
     private edu.co.sena.ceetregistro.negocio.ejbs.log.LogAplicacionFacade ejbLog;
+    
     private List<Cargo> items = null;
     private Cargo selected;
 
@@ -137,11 +139,16 @@ public class CargoController implements Serializable {
     }
 
     public void destroy() {
-        persist(PersistAction.DELETE, ResourceBundle.getBundle("/Bundle").getString("CargoDeleted"));
+        try {
+             persist(PersistAction.DELETE, ResourceBundle.getBundle("/Bundle").getString("CargoDeleted"));
         if (!JsfUtil.isValidationFailed()) {
             selected = null; // Remove selection
             items = null;    // Invalidate list of items to trigger re-query.
         }
+        } catch (Exception e) {
+           
+        }
+       
     }
 
     public List<Cargo> getItems() {
@@ -162,7 +169,7 @@ public class CargoController implements Serializable {
                 }
                 JsfUtil.addSuccessMessage(successMessage);
                 Logger.getLogger(this.getClass().getName()).log(Level.INFO, "se inserto un cargo");
-                ejbLog.create(new LogAplicacion(Level.INFO.getName(), successMessage , this.getClass().getCanonicalName(), new Date()));
+               ejbLog.create(new LogAplicacion(Level.INFO.getName(),successMessage , this.getClass().getCanonicalName(), new Date()));
                 
             } catch (EJBException ex) {
                 String msg = "";
