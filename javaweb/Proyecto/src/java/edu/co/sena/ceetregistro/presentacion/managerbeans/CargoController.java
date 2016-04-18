@@ -60,8 +60,14 @@ public class CargoController implements Serializable {
     }
 
     public Cargo prepareCreate() {
+        try {
         selected = new Cargo();
         initializeEmbeddableKey();
+        
+        } catch (Exception e) {
+       
+        }
+        
         return selected;
     }
 
