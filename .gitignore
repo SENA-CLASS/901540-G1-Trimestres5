@@ -29,3 +29,9 @@ hs_err_pid*
 /java/log4j/EjemploJSON/build/
 /java/servlets/Ejemplo1/nbproject/private/
 /java/servlets/Ejemplo1/build/
+/java/servlets/Ejemplo1/dist/
+/javaweb/ProyectosAnt/nbproject/private/
+/javaweb/ProyectoMaven/target/
+/javaweb/ProyectosAnt/dist/
+/javaweb/ProyectosAnt/build/
+/javaweb/ProyectoGradle/.nb-gradle/

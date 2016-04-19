@@ -7,6 +7,8 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "TercerEjemplo", urlPatterns = {"/TercerEjemplo"})
-public class TercerEjemplo extends HttpServlet {
+@WebServlet(name = "CuartoEjemplo", urlPatterns = {"/CuartoEjemplo"})
+public class CuartoEjemplo extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,22 +34,40 @@ public class TercerEjemplo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.addHeader("mi cabezera", "12345");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TercerEjemplo</title>");            
+            out.println("<title>Servlet CuartoEjemplo</title>");            
             out.println("</head>");
             out.println("<body>");
+            out.println("<h1>Servlet CuartoEjemplo at " + request.getContextPath() + "</h1>");
+            out.println("<h2>cabeceras del request</h2><br>");
+            Enumeration<String> cabeceras = request.getHeaderNames();
            
-            out.println("<h1>" + request.getSession(true).getId() + "</h1>");
-            out.println("<h1>request.getSession() "+"descripcion" + request.getSession(true).getId() + "</h1>");
-            out.println("<h1>request.getAuthType() " + request.getAuthType() + "</h1>");
-            out.println("<h1>request.getContextPath() " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet TercerEjemplo at " + request.getDateHeader("jkldf") + "</h1>");
-            out.println("<h1>Servlet TercerEjemplo at " + request.getLocalName() + "</h1>");
+            while (cabeceras.hasMoreElements()) {
+                String ct = cabeceras.nextElement();
+                Enumeration<String> cabecerasc = request.getHeaders(ct);
+            while (cabecerasc.hasMoreElements()) {
+                String ct2 = cabecerasc.nextElement();
+                out.println(ct+":--  "+ct2  +"<br>");
+            }
+                
+            }
+            
+            out.println("<h2>cabeceras del response</h2><br>");
+            
+            List<String> caresponse = (List<String>)response.getHeaderNames();
+            out.println(caresponse.size());
+            for (String ca : caresponse) {
+                 String caresCuerpo = response.getHeader(ca);
+                out.println(ca+": "+caresCuerpo+"<br>");
+            }
+           
+            
+            
+            out.println("</body>");
             out.println("</body>");
             out.println("</html>");
         }

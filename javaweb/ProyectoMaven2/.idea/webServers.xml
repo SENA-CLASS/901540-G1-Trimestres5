@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e264e96c-38bf-412a-a5a8-2a31f633ab93" name="GlassFish" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="D:\Herramientas\glassfish4" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>

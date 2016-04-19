@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "TercerEjemplo", urlPatterns = {"/TercerEjemplo"})
-public class TercerEjemplo extends HttpServlet {
+@WebServlet(name = "SextoEjemplo", urlPatterns = {"/SextoEjemplo"})
+public class SextoEjemplo extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,22 +33,20 @@ public class TercerEjemplo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.addHeader("mi cabezera", "12345");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet TercerEjemplo</title>");            
+            out.println("<title>Servlet SextoEjemplo</title>");            
             out.println("</head>");
             out.println("<body>");
-           
-            out.println("<h1>" + request.getSession(true).getId() + "</h1>");
-            out.println("<h1>request.getSession() "+"descripcion" + request.getSession(true).getId() + "</h1>");
-            out.println("<h1>request.getAuthType() " + request.getAuthType() + "</h1>");
-            out.println("<h1>request.getContextPath() " + request.getContextPath() + "</h1>");
-            out.println("<h1>Servlet TercerEjemplo at " + request.getDateHeader("jkldf") + "</h1>");
-            out.println("<h1>Servlet TercerEjemplo at " + request.getLocalName() + "</h1>");
+            out.println("<h1>Servlet SextoEjemplo at " + request.getContextPath() + "</h1>");
+            Cookie c1 = new Cookie("nombre", "hernando");
+            Cookie c2 = new Cookie("apellido", "moreno");
+            response.addCookie(c1);
+            response.addCookie(c2);
+            
             out.println("</body>");
             out.println("</html>");
         }

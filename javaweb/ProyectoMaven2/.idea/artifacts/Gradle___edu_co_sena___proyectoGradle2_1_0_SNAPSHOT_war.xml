@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Gradle : edu.co.sena : proyectoGradle2-1.0-SNAPSHOT.war">
+    <output-path>$PROJECT_DIR$/out/artifacts/proyectoGradle2</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="archive" name="proyectoGradle2-1.0-SNAPSHOT.war">
+      <element id="javaee-facet-resources" facet="proyectoGradle2_main/web/Web Gradle : proyectoGradle2-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="proyectoGradle2_main" />
+          <element id="dir-copy" path="$PROJECT_DIR$/build/resources/main" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/artifacts/proyectoGradle2/exploded/proyectoGradle2-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
