@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo2;
+package edu.co.sena.ejemplo3.sendredirect;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "ServletSuma", urlPatterns = {"/ServletSuma"})
+public class ServletSuma extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,34 +34,21 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-       
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
-            Enumeration<String> muchosCookies = request.getParameterNames();
-            while (muchosCookies.hasMoreElements()) {
-                
-                String nombreCookie = muchosCookies.nextElement();
-                Cookie ct = new Cookie(nombreCookie, request.getParameter(nombreCookie));
-                response.addCookie(ct);
-            }
-            
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet1</title>");            
+            out.println("<title>Servlet ServletSuma</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Servlet1 at " + request.getContextPath() + "</h1>");
-            out.println("<A HREF=\"Servlet2\">Pulse aquí</A><br>");
-            
-             Cookie[] cokkies = request.getCookies();
-            for (int i = 0; i < cokkies.length; i++) {
-                out.println(cokkies[i].getName()+"<br>");
-                out.println(cokkies[i].getValue()+"<br>");
+            out.println("<h1>Servlet ServletSuma at " + request.getContextPath() + "</h1>");
+            Enumeration<String> parametros = request.getParameterNames();
+            while (parametros.hasMoreElements()) {
+                String parametro = parametros.nextElement();
+                out.println(parametro+": "+request.getParameter(parametro));
+                
             }
-           
             out.println("</body>");
             out.println("</html>");
         }
