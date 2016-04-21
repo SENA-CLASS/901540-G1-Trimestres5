@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo3.sendredirect;
+package edu.co.sena.ejemplo3.requestdispacher.forward;
 
+import edu.co.sena.ejemplo3.sendredirect.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -18,8 +19,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "ServletForward1", urlPatterns = {"/ServletForward1"})
+public class ServletForward1 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,9 +37,13 @@ public class Servlet1 extends HttpServlet {
         try {
             switch (request.getParameter("operacion")) {
             case "suma": {
+                //opcion numero 1
+                //request.getRequestDispatcher("ServletSuma").forward(request, response);
+                //opcion numero 2
+                RequestDispatcher rd = request.getRequestDispatcher("ServletSuma");
+                
+                rd.forward(request, response);
                
-                //este nos envoa al recurso pero ignora el request y el responde que tiene actualmente
-                response.sendRedirect("fasdfasdf");
                 break;
             }
             case "resta": {

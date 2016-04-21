@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo3.sendredirect;
+package edu.co.sena.ejemplo3.requestdispacher.include;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "ServletInclude2", urlPatterns = {"/ServletInclude2"})
+public class ServletInclude2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,31 +33,20 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try {
-            switch (request.getParameter("operacion")) {
-            case "suma": {
-               
-                //este nos envoa al recurso pero ignora el request y el responde que tiene actualmente
-                response.sendRedirect("fasdfasdf");
-                break;
-            }
-            case "resta": {
-                
-                break;
-            }
-            case "multi": {
-                response.sendRedirect("ServletMulti");
-                break;
-            }
-            case "divi": {
-                response.sendRedirect("ServletDivi");
-                break;
-            }
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            Date fecha = new Date();
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ServletInclude2</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ServletInclude2 at " + request.getContextPath() + "</h1>");
+            out.println("<h1>la fecha es: " + fecha.toString() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
-        } catch (Exception e) {
-        
-        }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

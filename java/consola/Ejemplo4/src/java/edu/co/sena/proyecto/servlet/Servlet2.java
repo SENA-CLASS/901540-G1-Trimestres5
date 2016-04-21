@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo3.sendredirect;
+package edu.co.sena.proyecto.servlet;
 
+import edu.co.sena.proeycto.integracion.entities.Cargo;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.List;
+import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,8 +20,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "Servlet2", urlPatterns = {"/Servlet2"})
+public class Servlet2 extends HttpServlet {
+
+    @EJB
+    edu.co.sena.proeycto.negocio.ejbs.CargoFacadeLocal ejbCargo;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,31 +38,31 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try {
-            switch (request.getParameter("operacion")) {
-            case "suma": {
-               
-                //este nos envoa al recurso pero ignora el request y el responde que tiene actualmente
-                response.sendRedirect("fasdfasdf");
-                break;
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            List<Cargo> cargos = ejbCargo.findAll();
+
+            out.println("<table border=\"1\">\n"
+                    + " <thead>\n"
+                    + "  <tr>\n"
+                    + "     <th>Id cargo </th>\n"
+                    + "     <th>Estado</th>\n"
+                    + "     <th>Descripcion</th>\n"
+                    + "  </tr>\n"
+                    + " </thead> <tbody>\n");
+            for (Cargo cargo : cargos) {
+                out.println("<tr>"
+                        + "<td>"+cargo.getIdCargo()+"</td>"
+                        + "<td>"+cargo.getEstado()+"</td>"
+                        + "<td>"+cargo.getDescripcionCargo()+"</td></tr>"
+                );
             }
-            case "resta": {
-                
-                break;
-            }
-            case "multi": {
-                response.sendRedirect("ServletMulti");
-                break;
-            }
-            case "divi": {
-                response.sendRedirect("ServletDivi");
-                break;
-            }
+            out.println("</tbody></table>");
+            out.println("</body>");
+            out.println("</html>");
+            
+
         }
-        } catch (Exception e) {
-        
-        }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

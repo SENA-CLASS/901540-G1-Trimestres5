@@ -3,13 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo3.sendredirect;
+package edu.co.sena.ejemplo3.requestdispacher.forward;
 
+import edu.co.sena.ejemplo3.sendredirect.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.Enumeration;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,8 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "ServletSuma", urlPatterns = {"/ServletSuma"})
+public class ServletSuma extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,31 +35,24 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try {
-            switch (request.getParameter("operacion")) {
-            case "suma": {
-               
-                //este nos envoa al recurso pero ignora el request y el responde que tiene actualmente
-                response.sendRedirect("fasdfasdf");
-                break;
-            }
-            case "resta": {
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet ServletSuma</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet ServletSuma at " + request.getContextPath() + "</h1>");
+            Enumeration<String> parametros = request.getParameterNames();
+            while (parametros.hasMoreElements()) {
+                String parametro = parametros.nextElement();
+                out.println(parametro+": "+request.getParameter(parametro));
                 
-                break;
             }
-            case "multi": {
-                response.sendRedirect("ServletMulti");
-                break;
-            }
-            case "divi": {
-                response.sendRedirect("ServletDivi");
-                break;
-            }
+            out.println("</body>");
+            out.println("</html>");
         }
-        } catch (Exception e) {
-        
-        }
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
