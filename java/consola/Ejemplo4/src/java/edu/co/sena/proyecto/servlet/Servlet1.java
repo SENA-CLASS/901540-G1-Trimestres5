@@ -38,6 +38,7 @@ public class Servlet1 extends HttpServlet {
             out.println("<html>");
             out.println("<head>");
             out.println("<title>Servlet Servlet1</title>");            
+            out.println("<link rel=\"stylesheet\" href=\"./resources/css/micss.css\" type=\"text/css\" media=\"all\" />");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Servlet1 at " + request.getContextPath() + "</h1>");

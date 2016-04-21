@@ -42,7 +42,7 @@ public class Servlet2 extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             List<Cargo> cargos = ejbCargo.findAll();
 
-            out.println("<table border=\"1\">\n"
+            out.println("<table id=\"t1\" class=\"c1\">\n"
                     + " <thead>\n"
                     + "  <tr>\n"
                     + "     <th>Id cargo </th>\n"
