@@ -12,3 +12,7 @@
 th, td {
     border: 1px solid aqua;
 }
+thead {
+    color: blue
+    
+}

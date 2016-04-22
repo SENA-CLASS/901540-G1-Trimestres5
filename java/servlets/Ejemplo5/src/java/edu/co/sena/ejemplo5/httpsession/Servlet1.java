@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.proyecto.servlet;
+package edu.co.sena.ejemplo5.httpsession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -32,20 +32,18 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-        
+        request.getSession(true);
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet1</title>");            
-            out.println("<link rel=\"stylesheet\" href=\"./resources/css/micss.css\" type=\"text/css\" media=\"all\" />");            
+            out.println("<title>Servlet Servelt1</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Servlet1 at " + request.getContextPath()+ "</h1>");
-            request.getRequestDispatcher("Servlet2").include(request, response);
-            
+            out.println("<h1>Servlet Servelt1 at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 

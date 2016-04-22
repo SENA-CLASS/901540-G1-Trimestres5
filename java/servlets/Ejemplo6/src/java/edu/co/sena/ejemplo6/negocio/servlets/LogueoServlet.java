@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.proyecto.servlet;
+package edu.co.sena.ejemplo6.negocio.servlets;
 
+import edu.co.sena.ejemplo6.integracion.entities.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +20,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "LogueoServlet", urlPatterns = {"/LogueoServlet"})
+public class LogueoServlet extends HttpServlet {
+
+    @Inject
+    private edu.co.sena.ejemplo6.negocio.ejbs.UsuarioFacadeLocal ejbUsuario;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,20 +38,41 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-        
+
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Servlet1</title>");            
-            out.println("<link rel=\"stylesheet\" href=\"./resources/css/micss.css\" type=\"text/css\" media=\"all\" />");            
+            out.println("<title>Servlet LogueoServlet</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Servlet1 at " + request.getContextPath()+ "</h1>");
-            request.getRequestDispatcher("Servlet2").include(request, response);
+            try {
+            Usuario usuario = ejbUsuario.findByPk(request.getParameter("tipoDocumento"),
+                    request.getParameter("numeroDocumento"));
+            if (usuario != null) {
+                if (request.getParameter("password").equals(usuario.getPass())) {
+                    request.getSession();
+                    out.println("el usuario logeado es: " + usuario.getCuenta().getPrimerNombre() + " "
+                            + usuario.getCuenta().getSegundoNombre() + " "
+                            + usuario.getCuenta().getPrimerApellido() + " "
+                            + usuario.getCuenta().getSegundoApellido()
+                    );
+                }else{
+                    out.println("la contraseña es incorrecta");
+                }
+            } else {
+            out.print("por aqui estamos");
+            }
+            } catch (Exception e) {
+                 out.println("el usuario no existe"+ e.getMessage());
+            }
             
+            
+
+            out.println("</body>");
+            out.println("</html>");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
