@@ -5,28 +5,21 @@
  */
 package edu.co.sena.ejemplo6.negocio.servlets;
 
-import edu.co.sena.ejemplo6.integracion.entities.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.ejb.EJB;
-import javax.inject.Inject;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author hernando
  */
-@WebServlet(name = "LogueoServlet", urlPatterns = {"/LogueoServlet"})
-public class LogueoServlet extends HttpServlet {
-
-    @Inject
-    private edu.co.sena.ejemplo6.negocio.ejbs.UsuarioFacadeLocal ejbUsuario;
+@WebServlet(name = "Servlet3", urlPatterns = {"/Servlet3"})
+public class Servlet3 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,50 +32,15 @@ public class LogueoServlet extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-
-        try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LogueoServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            try {
-            Usuario usuario = ejbUsuario.findByPk(request.getParameter("tipoDocumento"),
-                    request.getParameter("numeroDocumento"));
-            if (usuario != null) {
-                if (request.getParameter("password").equals(usuario.getPass())) {
-                     HttpSession session = request.getSession();
-                     ServletContext application=getServletContext();
-                    // primera opcion pasar por la interface de session
-                    //request.getSession().setAttribute("usuario", usuario);
-                    //response.sendRedirect("Servlet2");
-                    
-                    //segunda opcion agregar un objero por el RequestDispachet
-                    //request.setAttribute("usuario", usuario);
-                    //request.getRequestDispatcher("Servlet2").forward(request, response);
-                    
-                    //tercera opcion
-                    application.setAttribute("usuario", usuario);
-                    response.sendRedirect("Servlet2");
-                }else{
-                    out.println("la contraseña es incorrecta");
-                }
-            } else {
-            out.print("por aqui estamos");
-            }
-            } catch (Exception e) {
-                 out.println("el usuario no existe"+ e.getMessage());
-            }
+       request.getSession(false).invalidate();
+        Cookie cokkies[]= request.getCookies();
+        for (int i = 0; i < cokkies.length; i++) {
+            Cookie ct = cokkies[i];
+            ct.setMaxAge(0);
+            response.addCookie(ct);
             
-            
-
-            out.println("</body>");
-            out.println("</html>");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
         }
+       response.sendRedirect("index.html");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

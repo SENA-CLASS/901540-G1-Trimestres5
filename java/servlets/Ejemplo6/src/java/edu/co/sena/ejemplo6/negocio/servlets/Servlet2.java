@@ -6,10 +6,9 @@
 package edu.co.sena.ejemplo6.negocio.servlets;
 
 import edu.co.sena.ejemplo6.integracion.entities.Usuario;
+import edu.co.sena.ejemplo6.integracion.entities.UsuarioLogueado;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.ejb.EJB;
-import javax.inject.Inject;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,11 +21,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author hernando
  */
-@WebServlet(name = "LogueoServlet", urlPatterns = {"/LogueoServlet"})
-public class LogueoServlet extends HttpServlet {
-
-    @Inject
-    private edu.co.sena.ejemplo6.negocio.ejbs.UsuarioFacadeLocal ejbUsuario;
+@WebServlet(name = "Servlet2", urlPatterns = {"/Servlet2"})
+public class Servlet2 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,46 +38,45 @@ public class LogueoServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         try (PrintWriter out = response.getWriter()) {
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet LogueoServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            try {
-            Usuario usuario = ejbUsuario.findByPk(request.getParameter("tipoDocumento"),
-                    request.getParameter("numeroDocumento"));
-            if (usuario != null) {
-                if (request.getParameter("password").equals(usuario.getPass())) {
-                     HttpSession session = request.getSession();
-                     ServletContext application=getServletContext();
-                    // primera opcion pasar por la interface de session
-                    //request.getSession().setAttribute("usuario", usuario);
-                    //response.sendRedirect("Servlet2");
-                    
-                    //segunda opcion agregar un objero por el RequestDispachet
-                    //request.setAttribute("usuario", usuario);
-                    //request.getRequestDispatcher("Servlet2").forward(request, response);
-                    
-                    //tercera opcion
-                    application.setAttribute("usuario", usuario);
-                    response.sendRedirect("Servlet2");
-                }else{
-                    out.println("la contraseña es incorrecta");
-                }
-            } else {
-            out.print("por aqui estamos");
-            }
-            } catch (Exception e) {
-                 out.println("el usuario no existe"+ e.getMessage());
-            }
-            
-            
+            HttpSession session = request.getSession(false);
+            if (session != null) {
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet Servlet2</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Servlet Servlet2 at " + request.getContextPath() + "</h1>");
+                
 
-            out.println("</body>");
-            out.println("</html>");
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+                //UsuarioLogueado usuario = (Usuario)session.getAttribute("usuario");
+                //out.println("<h1>el usuario logueado es"+usuario.getCuenta().getPrimerNombre() + "</h1>");
+                
+                //UsuarioLogueado usuario = (Usuario)request.getAttribute("usuario");
+                //out.println("<h1>el usuario logueado es"+usuario.getCuenta().getPrimerNombre() + "</h1>");
+                ServletContext application=getServletContext();
+                UsuarioLogueado usuario = (Usuario)application.getAttribute("usuario");
+                out.println("<h1>el usuario logueado es"+usuario.getCuenta().getPrimerNombre() + "</h1>");
+                
+                
+                out.println("<a href=\"Servlet3\">cerrar</a>");
+                
+                
+                out.println("</body>");
+                out.println("</html>");
+            }else{
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet Servlet2</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Usted no esta logueado</h1>");
+                out.println("</body>");
+                out.println("</html>");
+            
+            }
+
         }
     }
 

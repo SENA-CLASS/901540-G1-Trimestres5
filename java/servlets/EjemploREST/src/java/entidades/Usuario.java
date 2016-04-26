@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo6.integracion.entities;
+package entidades;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -28,13 +28,12 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u"),
-    @NamedQuery(name = "Usuario.findByPK", query = "SELECT u FROM Usuario u WHERE u.usuarioPK.cuentaTipoDocumentotipodocumento = :cuentaTipoDocumentotipodocumento AND u.usuarioPK.cuentanumeroDocumento = :cuentanumeroDocumento"),
     @NamedQuery(name = "Usuario.findByCuentaTipoDocumentotipodocumento", query = "SELECT u FROM Usuario u WHERE u.usuarioPK.cuentaTipoDocumentotipodocumento = :cuentaTipoDocumentotipodocumento"),
     @NamedQuery(name = "Usuario.findByCuentanumeroDocumento", query = "SELECT u FROM Usuario u WHERE u.usuarioPK.cuentanumeroDocumento = :cuentanumeroDocumento"),
     @NamedQuery(name = "Usuario.findByPass", query = "SELECT u FROM Usuario u WHERE u.pass = :pass"),
     @NamedQuery(name = "Usuario.findByRol", query = "SELECT u FROM Usuario u WHERE u.rol = :rol"),
     @NamedQuery(name = "Usuario.findByEstado", query = "SELECT u FROM Usuario u WHERE u.estado = :estado")})
-public class Usuario implements Serializable, UsuarioLogueado {
+public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @EmbeddedId
@@ -65,7 +64,6 @@ public class Usuario implements Serializable, UsuarioLogueado {
         this.usuarioPK = new UsuarioPK(cuentaTipoDocumentotipodocumento, cuentanumeroDocumento);
     }
 
-    @Override
     public UsuarioPK getUsuarioPK() {
         return usuarioPK;
     }
@@ -82,7 +80,6 @@ public class Usuario implements Serializable, UsuarioLogueado {
         this.pass = pass;
     }
 
-    @Override
     public String getRol() {
         return rol;
     }
@@ -91,7 +88,6 @@ public class Usuario implements Serializable, UsuarioLogueado {
         this.rol = rol;
     }
 
-    @Override
     public String getEstado() {
         return estado;
     }
@@ -130,7 +126,7 @@ public class Usuario implements Serializable, UsuarioLogueado {
 
     @Override
     public String toString() {
-        return "edu.co.sena.ejemplo6.integracion.entities.Usuario[ usuarioPK=" + usuarioPK + " ]";
+        return "entidades.Usuario[ usuarioPK=" + usuarioPK + " ]";
     }
     
 }
