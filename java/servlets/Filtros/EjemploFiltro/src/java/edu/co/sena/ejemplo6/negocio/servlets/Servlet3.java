@@ -3,15 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo7.servlet;
+package edu.co.sena.ejemplo6.negocio.servlets;
 
-import edu.co.sena.ejemplo7.modelo.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet2", urlPatterns = {"/Servlet2"})
-public class Servlet2 extends HttpServlet {
+@WebServlet(name = "Servlet3", urlPatterns = {"/Servlet3"})
+public class Servlet3 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,27 +32,15 @@ public class Servlet2 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ServletContext application=getServletContext();
-        response.setContentType("text/html;charset=UTF-8");
-        
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servle2</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servle2 at " + request.getContextPath() + "</h1>");
+       request.getSession(false).invalidate();
+        Cookie cokkies[]= request.getCookies();
+        for (int i = 0; i < cokkies.length; i++) {
+            Cookie ct = cokkies[i];
+            ct.setMaxAge(0);
+            response.addCookie(ct);
             
-            List<Persona> personas = (List<Persona>)application.getAttribute("personas");
-            for (Persona persona : personas) {
-                out.println(persona.toString()+"<br>");
-            }
-            
-            out.println("</body>");
-            out.println("</html>");
         }
+       response.sendRedirect("index.html");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

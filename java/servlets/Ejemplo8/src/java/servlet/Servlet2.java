@@ -3,18 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo7.servlet;
+package servlet;
 
-import edu.co.sena.ejemplo7.modelo.Persona;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.util.Enumeration;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import org.jboss.weld.context.http.HttpRequestContext;
 
 /**
  *
@@ -34,27 +36,26 @@ public class Servlet2 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ServletContext application=getServletContext();
-        response.setContentType("text/html;charset=UTF-8");
+       // primer objeto request
         
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servle2</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servle2 at " + request.getContextPath() + "</h1>");
+        
+        ServletContext aplication = request.getServletContext();
+        HttpSession session = request.getSession();
+        PrintWriter out = response.getWriter();
+        ServletConfig config = getServletConfig();
+        
+        Enumeration<String> parametros= aplication.getInitParameterNames();
+        
+        while (parametros.hasMoreElements()) {
+            String nextElement = parametros.nextElement();
             
-            List<Persona> personas = (List<Persona>)application.getAttribute("personas");
-            for (Persona persona : personas) {
-                out.println(persona.toString()+"<br>");
-            }
-            
-            out.println("</body>");
-            out.println("</html>");
+        out.println(nextElement);
+        out.println(aplication.getInitParameter(nextElement));
+        
         }
+        
+        
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -3,18 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplo7.servlet;
+package edu.co.sena.ejemplo6.negocio.servlets;
 
-import edu.co.sena.ejemplo7.modelo.Persona;
+import edu.co.sena.ejemplo6.integracion.entities.Usuario;
+import edu.co.sena.ejemplo6.integracion.entities.UsuarioLogueado;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -34,26 +38,48 @@ public class Servlet2 extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ServletContext application=getServletContext();
         response.setContentType("text/html;charset=UTF-8");
-        
+
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servle2</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servle2 at " + request.getContextPath() + "</h1>");
-            
-            List<Persona> personas = (List<Persona>)application.getAttribute("personas");
-            for (Persona persona : personas) {
-                out.println(persona.toString()+"<br>");
+            HttpSession session = request.getSession(false);
+            if (session != null) {
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet Servlet2</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Servlet Servlet2 at " + request.getContextPath() + "</h1>");
+                UsuarioLogueado usuario = (Usuario) session.getAttribute("usuario");
+                out.println("<h1>el usuario logueado es" + usuario.getCuenta().getPrimerNombre() + "</h1>");
+
+                ServletContext aplication = request.getServletContext();
+
+                HashMap<String, Integer> urls = (HashMap<String, Integer>) aplication.getAttribute("estadistica");
+
+                Iterator it = urls.entrySet().iterator();
+                while (it.hasNext()) {
+                    Map.Entry e = (Map.Entry) it.next();
+                    out.println("key: "+ e.getKey() + " value: " + e.getValue()+"<br>");
+                    
+                }
+
+                out.println("<a href=\"Servlet3\">cerrar</a>");
+                out.println("</body>");
+                out.println("</html>");
+            } else {
+                out.println("<!DOCTYPE html>");
+                out.println("<html>");
+                out.println("<head>");
+                out.println("<title>Servlet Servlet2</title>");
+                out.println("</head>");
+                out.println("<body>");
+                out.println("<h1>Usted no esta logueado</h1>");
+                out.println("</body>");
+                out.println("</html>");
+
             }
-            
-            out.println("</body>");
-            out.println("</html>");
+
         }
     }
 
