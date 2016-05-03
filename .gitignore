@@ -67,3 +67,4 @@ hs_err_pid*
 /java/servlets/Filtros/EjemploLogueoFiltro/dist/
 /java/servlets/UploadFile/nbproject/private/
 /java/servlets/UploadFile/build/
+/java/servlets/UploadFile/dist/
