@@ -60,3 +60,10 @@ hs_err_pid*
 /java/servlets/Ejemplo8/build/
 /java/servlets/Filtros/EjemploLogueoFiltro/nbproject/private/
 /java/servlets/Filtros/EjemploLogueoFiltro/build/
+/javaweb/EjemploJEE8/target/
+/javaweb/EjemploJEE82/target/
+/javaweb/PruebaRest/nbproject/private/
+/javaweb/PruebaRest/build/
+/java/servlets/Filtros/EjemploLogueoFiltro/dist/
+/java/servlets/UploadFile/nbproject/private/
+/java/servlets/UploadFile/build/

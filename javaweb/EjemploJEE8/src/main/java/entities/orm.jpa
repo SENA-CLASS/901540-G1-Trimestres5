@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" v="1.5.5" status="GENERATED" xs="false" id="_146222704371076" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd">
+    <jpa:entity xre="false" sm="false" abs="false" class="Cargo" visibile="true" minimized="false" rootElement="_146222704371076" id="_146222704371077">
+        <jpa:attributes>
+            <basic optional="true" attribute-type="String" visibile="true" name="descripcionCargo" id="_146222704371079">
+                <jpa:column name="descripcion_Cargo" unique="false" nullable="true" insertable="true" updatable="true" table="cargo" length="45"/>
+            </basic>
+            <basic optional="true" attribute-type="String" visibile="true" name="estado" id="_146222704371080">
+                <jpa:column name="estado" unique="false" nullable="true" insertable="true" updatable="true" table="cargo" length="45"/>
+            </basic>
+            <jpa:id attribute-type="String" visibile="true" name="idCargo" id="_146222704371078">
+                <jpa:column name="idCargo" unique="false" nullable="false" insertable="true" updatable="true" table="cargo" length="50"/>
+            </jpa:id>
+        </jpa:attributes>
+        <jpa:table name="cargo"/>
+    </jpa:entity>
+    <jpa:diagram>
+        <plane elementRef="_146222704371076"/>
+    </jpa:diagram>
+</jpa:entity-mappings>

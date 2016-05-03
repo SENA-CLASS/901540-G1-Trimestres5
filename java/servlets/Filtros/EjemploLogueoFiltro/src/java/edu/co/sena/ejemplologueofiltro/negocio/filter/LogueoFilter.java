@@ -26,7 +26,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author hernando
  */
-@WebFilter(filterName = "LogueoFilter", urlPatterns = {"/admin/*"})
+//@WebFilter(filterName = "LogueoFilter", urlPatterns = {"/admin/*"})
 public class LogueoFilter implements Filter {
 
     private static final boolean debug = true;

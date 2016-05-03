@@ -17,6 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -25,7 +26,10 @@ import javax.servlet.http.HttpSession;
  *
  * @author hernando
  */
-@WebFilter(filterName = "LogueoClienteFilter", urlPatterns = {"/cliente/*"})
+@WebFilter(filterName = "LogueoClienteFilter", 
+        urlPatterns = {"/cliente/*"}
+        
+)
 public class LogueoClienteFilter implements Filter {
     
     private static final boolean debug = true;
