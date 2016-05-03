@@ -68,3 +68,6 @@ hs_err_pid*
 /java/servlets/UploadFile/nbproject/private/
 /java/servlets/UploadFile/build/
 /java/servlets/UploadFile/dist/
+/java/jaas/EjemploJAAS1/nbproject/private/
+/java/jaas/EjemploJAAS1/build/
+/java/jaas/EjemploJAAS1/dist/
