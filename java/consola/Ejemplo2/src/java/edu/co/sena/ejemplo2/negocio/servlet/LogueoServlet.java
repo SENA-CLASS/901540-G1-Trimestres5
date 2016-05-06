@@ -3,25 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package edu.co.sena.ejemplojaas1.servlet;
+package edu.co.sena.ejemplo2.negocio.servlet;
 
+
+import edu.co.sena.ejemplo2.integracion.entities.Usuario;
+import edu.co.sena.ejemplo2.negocio.ejbs.UsuarioFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.ejb.EJB;
+import javax.inject.Inject;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.HttpConstraint;
-import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author hernando
  */
-@WebServlet(name = "Servlet1", urlPatterns = {"/Servlet1"})
-@ServletSecurity(@HttpConstraint(rolesAllowed = "administrador"))
-public class Servlet1 extends HttpServlet {
+@WebServlet(name = "LogueoServlet", urlPatterns = {"/LogueoServlet"})
+public class LogueoServlet extends HttpServlet {
+
+    @Inject
+    private UsuarioFacade ejbUsuario;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +43,48 @@ public class Servlet1 extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Servlet1</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Servlet1 at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+
+        try {
+            Usuario usuario = ejbUsuario.findByPk(request.getParameter("tipoDocumento"),
+                    request.getParameter("numeroDocumento"));
+            if (usuario != null) {
+                if (request.getParameter("password").equals(usuario.getPass())) {
+                    
+                  
+                    
+                    
+                    HttpSession session;
+                    
+                    if(request.getSession()!=null){
+                        request.getSession(false).invalidate();
+                    }
+                    
+                    switch (usuario.getRol()) {
+                        case "admin":
+                            session = request.getSession();
+                            session.setAttribute("usuario", usuario);
+                            response.sendRedirect("admin/administrador.jsp");
+                            //request.getRequestDispatcher("admin/administrador.jsp").forward(request, response);
+                            break;
+                        case "cliente":
+                            session = request.getSession();
+                            session.setAttribute("usuario", usuario);
+                            response.sendRedirect("cliente/cliente.jsp");
+                            break;
+                        default:
+                            response.sendRedirect("logueo.jsp");
+                            break;
+                    }
+
+                } else {
+                    response.sendRedirect("logueo.jsp");
+                }
+            } else {
+                response.sendRedirect("logueo.jsp");
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
         }
     }
 
