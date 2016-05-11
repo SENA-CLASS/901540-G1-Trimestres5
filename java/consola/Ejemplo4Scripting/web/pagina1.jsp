@@ -4,10 +4,13 @@
     Author     : hernando
 --%>
 
+<%@page import="javax.ejb.EJB"%>
 <%@page import="java.util.List"%>
 <%! private String nombre = "Hernando";
     private String apellido = "Moreno";
-    private List<Object> listado;%>
+    private List<Object> listado ;
+
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

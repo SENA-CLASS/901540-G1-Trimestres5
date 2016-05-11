@@ -30,7 +30,7 @@
             for (int i = 1; i <= 10; i++) {
                 
             out.println("<tr><td>");
-                out.print("1 * "+i+" = "+(1+i)+"");
+                out.print("1 * "+i+" = "+(1*i)+"");
             out.println("</td></tr>");
             }
             out.println(" </table>");
