@@ -1,6 +1,6 @@
 <%-- 
     Document   : pagina2
-    Created on : 11/05/2016, 05:50:24 PM
+    Created on : 12/05/2016, 04:36:26 PM
     Author     : hernando
 --%>
 
@@ -12,12 +12,60 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>pagina2</h1>
-        
-        <jsp:useBean id="perro2" class="edu.co.sena.ejemplo1.presentacion.bean.PerroFormulario" scope="request"/>
-         <jsp:getProperty name="perro2" property="nombre"/>
-        <jsp:getProperty name="perro2" property="raza"/>
-        <jsp:getProperty name="perro2" property="tamano"/>
-        ${param.eje}
+        <table border="1">
+            <tr>
+                <td><b>Relational Operator</b></td>
+                <td><b>Boolean Result</b></td>
+            </tr>
+            <tr>
+                <td>${'${'}10 &lt; 20}</td>
+                <td>${10 < 20}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 &gt; 20}</td>
+                <td>${10 > 20}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 &gt;= 10}</td>
+                <td>${10 >= 10}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 &lt;= 10}</td>
+                <td>${10 <= 10}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 == 10}</td>
+                <td>${10 == 10}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 != 20}</td>
+                <td>${10 != 20}</td>
+            </tr>
+            <tr>
+            <tr>
+                <td>${'${'}10 lt 20}</td>
+                <td>${10 lt 20}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 gt 20}</td>
+                <td>${10 gt 20}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 le 10}</td>
+                <td>${10 le 10}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 ge 10}</td>
+                <td>${10 ge 10}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 eq 10}</td>
+                <td>${10 eq 10}</td>
+            </tr>
+            <tr>
+                <td>${'${'}10 ne 20}</td>
+                <td>${10 ne 20}</td >
+            </tr>
+        </table>
     </body>
 </html>

@@ -22,444 +22,8 @@
     <favorites_list name="Proyecto" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="sdfasdf.uml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/sdfasdf.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement />
-              <nodes>
-                <node x="1245.6223389355737" y="1323.0">edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController</node>
-                <node x="399.0" y="2012.0">edu.co.sena.ceetregistro.integracion.entitites.Propietario_</node>
-                <node x="2301.170932539682" y="33.0">edu.co.sena.ceetregistro.integracion.entitites.PropietarioPK</node>
-                <node x="377.26610644257744" y="1556.0">edu.co.sena.ceetregistro.presentacion.managerbeans.EquipoController.EquipoControllerConverter</node>
-                <node x="874.0" y="2012.0">edu.co.sena.ceetregistro.integracion.entitites.TipoDocumento_</node>
-                <node x="1273.5" y="1652.0">edu.co.sena.ceetregistro.presentacion.managerbeans.log.util.JsfUtil</node>
-                <node x="1086.0" y="2196.0">edu.co.sena.ceetregistro.integracion.entitites.CuentaPK_</node>
-                <node x="0.0" y="2196.0">edu.co.sena.ceetregistro.integracion.entitites.PropietarioPK_</node>
-                <node x="1609.955672268907" y="828.0">edu.co.sena.ceetregistro.negocio.ejbs.log.AbstractFacade</node>
-                <node x="1354.6209325396821" y="828.0">edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade</node>
-                <node x="1096.1209325396821" y="1113.0">edu.co.sena.ceetregistro.integracion.entitites.Cargo</node>
-                <node x="661.6646358543417" y="1345.0">edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController</node>
-                <node x="2298.3467787114846" y="1356.0">edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController</node>
-                <node x="703.120932539682" y="685.0">edu.co.sena.ceetregistro.integracion.entitites.Cuenta</node>
-                <node x="1300.1223389355737" y="1556.0">edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController.CargoControllerConverter</node>
-                <node x="152.51610644257744" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.UsuarioFacade</node>
-                <node x="562.0" y="2196.0">edu.co.sena.ceetregistro.integracion.entitites.UsuarioPK_</node>
-                <node x="139.4271358543415" y="1534.0">edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController.UsuarioControllerConverter</node>
-                <node x="1410.0" y="1652.0">edu.co.sena.ceetregistro.integracion.entitites.Equipo_</node>
-                <node x="1669.9334325396821" y="1356.0">edu.co.sena.ceetregistro.presentacion.managerbeans.log.LogAplicacionController</node>
-                <node x="1080.0" y="1731.0">edu.co.sena.ceetregistro.presentacion.managerbeans.util.JsfUtil.PersistAction</node>
-                <node x="2582.8107492997206" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.TipoDocumentoFacade</node>
-                <node x="612.0" y="1652.0">edu.co.sena.ceetregistro.integracion.entitites.Registro_</node>
-                <node x="36.5" y="432.0">edu.co.sena.ceetregistro.integracion.entitites.Usuario</node>
-                <node x="2629.2217787114846" y="1556.0">edu.co.sena.ceetregistro.presentacion.managerbeans.TipoDocumentoController.TipoDocumentoControllerConverter</node>
-                <node x="1108.5" y="1652.0">edu.co.sena.ceetregistro.presentacion.managerbeans.util.JsfUtil</node>
-                <node x="2049.3467787114846" y="1356.0">edu.co.sena.ceetregistro.presentacion.managerbeans.RegistroController</node>
-                <node x="1245.0" y="1731.0">edu.co.sena.ceetregistro.presentacion.managerbeans.log.util.JsfUtil.PersistAction</node>
-                <node x="2073.8467787114846" y="1556.0">edu.co.sena.ceetregistro.presentacion.managerbeans.RegistroController.RegistroControllerConverter</node>
-                <node x="2258.4959325396817" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.PropietarioFacade</node>
-                <node x="0.0" y="2012.0">edu.co.sena.ceetregistro.integracion.entitites.Usuario_</node>
-                <node x="1361.1209325396821" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.CargoFacade</node>
-                <node x="1694.4334325396821" y="1556.0">edu.co.sena.ceetregistro.presentacion.managerbeans.log.LogAplicacionController.LogAplicacionControllerConverter</node>
-                <node x="2121.745932539682" y="211.0">edu.co.sena.ceetregistro.integracion.entitites.Propietario</node>
-                <node x="2604.7217787114846" y="1356.0">edu.co.sena.ceetregistro.presentacion.managerbeans.TipoDocumentoController</node>
-                <node x="352.76610644257744" y="1356.0">edu.co.sena.ceetregistro.presentacion.managerbeans.EquipoController</node>
-                <node x="2007.4959325396821" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.RegistroFacade</node>
-                <node x="2015.4959325396821" y="410.0">edu.co.sena.ceetregistro.integracion.entitites.Registro</node>
-                <node x="629.9146358543417" y="1534.0">edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController.CuentaControllerConverter</node>
-                <node x="1326.0" y="2012.0">edu.co.sena.ceetregistro.integracion.entitites.Cargo_</node>
-                <node x="469.97713585434167" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.EquipoFacade</node>
-                <node x="25.477135854341668" y="244.0">edu.co.sena.ceetregistro.integracion.entitites.UsuarioPK</node>
-                <node x="2389.0967787114846" y="1534.0">edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController.PropietarioControllerConverter</node>
-                <node x="2621.808432539682" y="443.0">edu.co.sena.ceetregistro.integracion.entitites.TipoDocumento</node>
-                <node x="345.4834325396821" y="0.0">edu.co.sena.ceetregistro.integracion.entitites.Equipo</node>
-                <node x="1544.1209325396821" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.log.LogAplicacionFacade</node>
-                <node x="1714.1209325396821" y="1102.0">edu.co.sena.ceetregistro.integracion.entitites.log.LogAplicacion</node>
-                <node x="21.066106442577393" y="1356.0">edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController</node>
-                <node x="926.120932539682" y="1157.0">edu.co.sena.ceetregistro.negocio.ejbs.CuentaFacade</node>
-                <node x="0.0" y="1652.0">edu.co.sena.ceetregistro.integracion.entitites.Cuenta_</node>
-                <node x="589.870932539682" y="476.0">edu.co.sena.ceetregistro.integracion.entitites.CuentaPK</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.CargoFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController" target="edu.co.sena.ceetregistro.integracion.entitites.UsuarioPK">
-                  <point x="-90.39999999999986" y="-47.5" />
-                  <point x="43.66610644257753" y="1303.0" />
-                  <point x="26.0" y="1303.0" />
-                  <point x="26.0" y="390.0" />
-                  <point x="64.60213585434167" y="390.0" />
-                  <point x="-117.375" y="36.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController.PropietarioControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController">
-                  <point x="-48.75" y="-36.5" />
-                  <point x="2437.8467787114846" y="1509.0" />
-                  <point x="2420.3467787114846" y="1509.0" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cargo" target="edu.co.sena.ceetregistro.integracion.entitites.Cuenta">
-                  <point x="-61.25" y="-69.5" />
-                  <point x="1157.3709325396821" y="1052.0" />
-                  <point x="1000.620932539682" y="1052.0" />
-                  <point x="85.0" y="168.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController.CuentaControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController">
-                  <point x="43.75" y="-36.5" />
-                  <point x="761.1646358543417" y="1509.0" />
-                  <point x="783.6646358543417" y="1509.0" />
-                  <point x="0.0" y="58.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.log.LogAplicacionController" target="edu.co.sena.ceetregistro.integracion.entitites.log.LogAplicacion">
-                  <point x="98.25" y="-47.5" />
-                  <point x="1899.1834325396821" y="1303.0" />
-                  <point x="1945.9959325396821" y="1303.0" />
-                  <point x="99.375" y="80.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.log.LogAplicacionController.LogAplicacionControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.log.LogAplicacionController">
-                  <point x="0.0" y="-14.5" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cuenta" target="edu.co.sena.ceetregistro.integracion.entitites.CuentaPK">
-                  <point x="-106.25" y="-168.5" />
-                  <point x="809.370932539682" y="635.0" />
-                  <point x="761.120932539682" y="635.0" />
-                  <point x="34.25" y="36.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController" target="edu.co.sena.ceetregistro.integracion.entitites.CuentaPK">
-                  <point x="-97.60000000000002" y="-58.5" />
-                  <point x="686.0646358543416" y="1303.0" />
-                  <point x="692.620932539682" y="1303.0" />
-                  <point x="-34.25" y="36.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController" target="edu.co.sena.ceetregistro.negocio.ejbs.CuentaFacade">
-                  <point x="97.60000000000002" y="-58.5" />
-                  <point x="881.2646358543417" y="1303.0" />
-                  <point x="1001.120932539682" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.log.LogAplicacionController" target="edu.co.sena.ceetregistro.negocio.ejbs.log.LogAplicacionFacade">
-                  <point x="-98.25" y="-47.5" />
-                  <point x="1702.6834325396821" y="1293.0" />
-                  <point x="1656.6209325396821" y="1293.0" />
-                  <point x="37.5" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Propietario" target="edu.co.sena.ceetregistro.integracion.entitites.PropietarioPK">
-                  <point x="91.875" y="-69.5" />
-                  <point x="2336.120932539682" y="191.0" />
-                  <point x="2373.170932539682" y="191.0" />
-                  <point x="-24.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController.UsuarioControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController">
-                  <point x="-44.25" y="-36.5" />
-                  <point x="183.6771358543415" y="1509.0" />
-                  <point x="134.0661064425774" y="1509.0" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController.UsuarioControllerConverter" target="edu.co.sena.ceetregistro.integracion.entitites.UsuarioPK">
-                  <point x="44.25" y="-36.5" />
-                  <point x="272.1771358543415" y="1509.0" />
-                  <point x="326.0" y="1509.0" />
-                  <point x="326.0" y="390.0" />
-                  <point x="299.35213585434167" y="390.0" />
-                  <point x="117.375" y="36.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController.CargoControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController">
-                  <point x="0.0" y="-14.5" />
-                  <point x="0.0" y="80.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.EquipoController" target="edu.co.sena.ceetregistro.negocio.ejbs.EquipoFacade">
-                  <point x="83.625" y="-47.5" />
-                  <point x="547.8911064425774" y="1303.0" />
-                  <point x="544.9771358543417" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController" target="edu.co.sena.ceetregistro.integracion.entitites.Cuenta">
-                  <point x="0.0" y="-58.5" />
-                  <point x="783.6646358543417" y="1303.0" />
-                  <point x="745.8646358543416" y="1303.0" />
-                  <point x="745.8646358543416" y="1052.0" />
-                  <point x="830.620932539682" y="1052.0" />
-                  <point x="-85.0" y="168.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.RegistroController.RegistroControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.RegistroController">
-                  <point x="0.0" y="-14.5" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController" target="edu.co.sena.ceetregistro.negocio.ejbs.UsuarioFacade">
-                  <point x="90.4" y="-47.5" />
-                  <point x="224.46610644257748" y="1303.0" />
-                  <point x="227.51610644257744" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController" target="edu.co.sena.ceetregistro.integracion.entitites.Cargo">
-                  <point x="-23.166666666666742" y="-80.5" />
-                  <point x="1361.455672268907" y="1283.0" />
-                  <point x="1300.2875992063487" y="1283.0" />
-                  <point x="81.66666666666674" y="69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.EquipoFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="544.9771358543417" y="1072.0" />
-                  <point x="1389.5495039682535" y="1072.0" />
-                  <point x="-46.571428571428555" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Usuario" target="edu.co.sena.ceetregistro.integracion.entitites.Cuenta">
-                  <point x="106.0" y="80.5" />
-                  <point x="275.0" y="645.0" />
-                  <point x="766.870932539682" y="645.0" />
-                  <point x="-148.75" y="-168.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cuenta" target="edu.co.sena.ceetregistro.integracion.entitites.Cargo">
-                  <point x="170.0" y="168.5" />
-                  <point x="1085.6209325396821" y="1042.0" />
-                  <point x="1279.8709325396821" y="1042.0" />
-                  <point x="61.25" y="-69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.TipoDocumentoController.TipoDocumentoControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.TipoDocumentoController">
-                  <point x="0.0" y="-14.5" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cuenta" target="edu.co.sena.ceetregistro.integracion.entitites.Propietario">
-                  <point x="-21.25" y="-168.5" />
-                  <point x="894.370932539682" y="665.0" />
-                  <point x="910.120932539682" y="665.0" />
-                  <point x="910.120932539682" y="370.0" />
-                  <point x="2139.245932539682" y="370.0" />
-                  <point x="-105.0" y="69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.TipoDocumentoFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="2660.8107492997206" y="1052.0" />
-                  <point x="1505.9780753968248" y="1052.0" />
-                  <point x="69.85714285714289" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.EquipoController.EquipoControllerConverter" target="edu.co.sena.ceetregistro.presentacion.managerbeans.EquipoController">
-                  <point x="0.0" y="-14.5" />
-                  <point x="0.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.EquipoController" target="edu.co.sena.ceetregistro.integracion.entitites.Equipo">
-                  <point x="-27.875" y="-47.5" />
-                  <point x="436.39110644257744" y="1303.0" />
-                  <point x="448.47713585434167" y="1303.0" />
-                  <point x="448.47713585434167" y="181.0" />
-                  <point x="424.9834325396821" y="181.0" />
-                  <point x="-53.0" y="80.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.RegistroController" target="edu.co.sena.ceetregistro.integracion.entitites.Registro">
-                  <point x="85.875" y="-47.5" />
-                  <point x="2249.7217787114846" y="1303.0" />
-                  <point x="2211.9092787114846" y="1303.0" />
-                  <point x="2211.9092787114846" y="645.0" />
-                  <point x="2289.995932539682" y="645.0" />
-                  <point x="122.0" y="102.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Registro" target="edu.co.sena.ceetregistro.integracion.entitites.Propietario">
-                  <point x="-76.25" y="-102.5" />
-                  <point x="2091.745932539682" y="390.0" />
-                  <point x="2209.245932539682" y="390.0" />
-                  <point x="-35.0" y="69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.UsuarioController" target="edu.co.sena.ceetregistro.integracion.entitites.Usuario">
-                  <point x="-45.200000000000045" y="-47.5" />
-                  <point x="88.86610644257735" y="1303.0" />
-                  <point x="91.72713585434167" y="1303.0" />
-                  <point x="91.72713585434167" y="665.0" />
-                  <point x="63.0" y="665.0" />
-                  <point x="-106.0" y="80.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.TipoDocumentoController" target="edu.co.sena.ceetregistro.integracion.entitites.TipoDocumento">
-                  <point x="-34.125" y="-47.5" />
-                  <point x="2707.0967787114846" y="1303.0" />
-                  <point x="2749.3107492997206" y="1303.0" />
-                  <point x="2749.3107492997206" y="665.0" />
-                  <point x="2744.308432539682" y="665.0" />
-                  <point x="0.0" y="69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Equipo" target="edu.co.sena.ceetregistro.integracion.entitites.Propietario">
-                  <point x="106.0" y="80.5" />
-                  <point x="583.9834325396821" y="181.0" />
-                  <point x="2213.620932539682" y="181.0" />
-                  <point x="-30.625" y="-69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController" target="edu.co.sena.ceetregistro.negocio.ejbs.CargoFacade">
-                  <point x="23.16666666666663" y="-80.5" />
-                  <point x="1407.7890056022402" y="1303.0" />
-                  <point x="1436.1209325396821" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.RegistroFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="2082.495932539682" y="1072.0" />
-                  <point x="1459.4066468253964" y="1072.0" />
-                  <point x="23.285714285714334" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cuenta" target="edu.co.sena.ceetregistro.integracion.entitites.TipoDocumento">
-                  <point x="148.75" y="-168.5" />
-                  <point x="1064.3709325396821" y="655.0" />
-                  <point x="2646.308432539682" y="655.0" />
-                  <point x="-98.0" y="69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.log.LogAplicacionFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.log.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="1619.1209325396821" y="1082.0" />
-                  <point x="1691.455672268907" y="1082.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.CuentaFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="1001.120932539682" y="1082.0" />
-                  <point x="1412.835218253968" y="1082.0" />
-                  <point x="-23.28571428571422" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController" target="edu.co.sena.ceetregistro.integracion.entitites.PropietarioPK">
-                  <point x="97.60000000000002" y="-47.5" />
-                  <point x="2517.9467787114845" y="1303.0" />
-                  <point x="2491.5467787114844" y="1303.0" />
-                  <point x="2491.5467787114844" y="191.0" />
-                  <point x="2421.170932539682" y="191.0" />
-                  <point x="24.0" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController" target="edu.co.sena.ceetregistro.negocio.ejbs.log.LogAplicacionFacade">
-                  <point x="69.5" y="-80.5" />
-                  <point x="1454.1223389355737" y="1293.0" />
-                  <point x="1581.6209325396821" y="1293.0" />
-                  <point x="-37.5" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.util.JsfUtil.PersistAction" target="edu.co.sena.ceetregistro.presentacion.managerbeans.util.JsfUtil">
-                  <point x="0.0" y="-47.5" />
-                  <point x="0.0" y="14.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController.PropietarioControllerConverter" target="edu.co.sena.ceetregistro.integracion.entitites.PropietarioPK">
-                  <point x="48.75" y="-36.5" />
-                  <point x="2535.3467787114846" y="1509.0" />
-                  <point x="2552.8467787114846" y="1509.0" />
-                  <point x="2552.8467787114846" y="181.0" />
-                  <point x="2469.170932539682" y="181.0" />
-                  <point x="71.99999999999989" y="47.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Registro" target="edu.co.sena.ceetregistro.integracion.entitites.Cuenta">
-                  <point x="-61.0" y="102.5" />
-                  <point x="2106.995932539682" y="645.0" />
-                  <point x="1021.870932539682" y="645.0" />
-                  <point x="106.25" y="-168.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cuenta" target="edu.co.sena.ceetregistro.integracion.entitites.Usuario">
-                  <point x="-191.25" y="-168.5" />
-                  <point x="724.370932539682" y="655.0" />
-                  <point x="222.0" y="655.0" />
-                  <point x="53.0" y="80.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Propietario" target="edu.co.sena.ceetregistro.integracion.entitites.Equipo">
-                  <point x="-91.875" y="-69.5" />
-                  <point x="2152.370932539682" y="191.0" />
-                  <point x="530.9834325396821" y="191.0" />
-                  <point x="53.0" y="80.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController" target="edu.co.sena.ceetregistro.integracion.entitites.Propietario">
-                  <point x="-48.799999999999955" y="-47.5" />
-                  <point x="2371.5467787114844" y="1293.0" />
-                  <point x="2418.9959325396817" y="1293.0" />
-                  <point x="2418.9959325396817" y="390.0" />
-                  <point x="2279.245932539682" y="390.0" />
-                  <point x="35.0" y="69.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.PropietarioController" target="edu.co.sena.ceetregistro.negocio.ejbs.PropietarioFacade">
-                  <point x="-97.60000000000014" y="-47.5" />
-                  <point x="2322.7467787114842" y="1303.0" />
-                  <point x="2333.4959325396817" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Propietario" target="edu.co.sena.ceetregistro.integracion.entitites.Cuenta">
-                  <point x="-70.0" y="69.5" />
-                  <point x="2174.245932539682" y="380.0" />
-                  <point x="921.120932539682" y="380.0" />
-                  <point x="921.120932539682" y="665.0" />
-                  <point x="936.870932539682" y="665.0" />
-                  <point x="21.25" y="-168.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Cuenta" target="edu.co.sena.ceetregistro.integracion.entitites.Registro">
-                  <point x="63.75" y="-168.5" />
-                  <point x="979.370932539682" y="635.0" />
-                  <point x="2045.9959325396821" y="635.0" />
-                  <point x="-122.0" y="102.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.UsuarioFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="227.51610644257744" y="1062.0" />
-                  <point x="1366.263789682539" y="1062.0" />
-                  <point x="-69.85714285714289" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Propietario" target="edu.co.sena.ceetregistro.integracion.entitites.Registro">
-                  <point x="0.0" y="69.5" />
-                  <point x="76.25" y="-102.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.negocio.ejbs.PropietarioFacade" target="edu.co.sena.ceetregistro.negocio.ejbs.AbstractFacade">
-                  <point x="0.0" y="-25.5" />
-                  <point x="2333.4959325396817" y="1062.0" />
-                  <point x="1482.6923611111106" y="1062.0" />
-                  <point x="46.571428571428555" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CuentaController.CuentaControllerConverter" target="edu.co.sena.ceetregistro.integracion.entitites.CuentaPK">
-                  <point x="-43.75" y="-36.5" />
-                  <point x="673.6646358543417" y="1509.0" />
-                  <point x="648.2661064425774" y="1509.0" />
-                  <point x="648.2661064425774" y="665.0" />
-                  <point x="624.120932539682" y="665.0" />
-                  <point x="-102.75" y="36.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.TipoDocumento" target="edu.co.sena.ceetregistro.integracion.entitites.Cuenta">
-                  <point x="-49.0" y="69.5" />
-                  <point x="2695.308432539682" y="665.0" />
-                  <point x="1106.8709325396821" y="665.0" />
-                  <point x="191.25" y="-168.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.RegistroController" target="edu.co.sena.ceetregistro.negocio.ejbs.RegistroFacade">
-                  <point x="-85.875" y="-47.5" />
-                  <point x="2077.9717787114846" y="1303.0" />
-                  <point x="2082.495932539682" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.integracion.entitites.Usuario" target="edu.co.sena.ceetregistro.integracion.entitites.UsuarioPK">
-                  <point x="-66.25" y="-80.5" />
-                  <point x="102.75" y="390.0" />
-                  <point x="142.85213585434167" y="390.0" />
-                  <point x="-39.125" y="36.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.log.util.JsfUtil.PersistAction" target="edu.co.sena.ceetregistro.presentacion.managerbeans.log.util.JsfUtil">
-                  <point x="0.0" y="-47.5" />
-                  <point x="0.0" y="14.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.TipoDocumentoController" target="edu.co.sena.ceetregistro.negocio.ejbs.TipoDocumentoFacade">
-                  <point x="-102.375" y="-47.5" />
-                  <point x="2638.8467787114846" y="1303.0" />
-                  <point x="2660.8107492997206" y="1303.0" />
-                  <point x="0.0" y="25.5" />
-                </edge>
-                <edge source="edu.co.sena.ceetregistro.presentacion.managerbeans.CargoController" target="edu.co.sena.ceetregistro.integracion.entitites.log.LogAplicacion">
-                  <point x="115.83333333333337" y="-80.5" />
-                  <point x="1500.4556722689072" y="1303.0" />
-                  <point x="1747.2459325396821" y="1303.0" />
-                  <point x="-99.375" y="80.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="473.41299888749836" y="317.9999999999999" />
-              <SelectedNodes />
-              <Categories>
-                <Category>Inner Classes</Category>
-                <Category>Fields</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Proyecto.iml" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Proyecto.iml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Proyecto.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
@@ -512,6 +76,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -520,81 +87,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ceetregistro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Proyecto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ceetregistro" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="entitites" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/javaapi/src" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
@@ -813,6 +313,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -978,6 +479,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1008,42 +515,43 @@
       <option name="presentableId" value="Default" />
       <updated>1461098743982</updated>
       <workItem from="1461098755179" duration="228000" />
+      <workItem from="1463264887635" duration="99000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228000" />
+    <option name="totallyTimeSpent" value="327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1370" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963072" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1062,6 +570,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Proyecto.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Proyecto.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1493,11 +1009,11 @@
               <point x="-99.375" y="80.5" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="473.41299888749836" y="317.9999999999999" />
+          <settings layout="Hierarchic Group" zoom="0.5000000000000001" x="473.0" y="318.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Inner Classes</Category>
             <Category>Fields</Category>
+            <Category>Inner Classes</Category>
           </Categories>
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
