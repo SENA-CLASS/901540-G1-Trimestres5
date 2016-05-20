@@ -24,7 +24,7 @@
         
         <h2>aca imprimo los libros usando el operador punto (.)<br/></h2>
         ${libros.java}<br/>
-        ${libros.net}<br/>
+        ${libros.get(".net")}<br/>
         ${libros.Python}<br/>
         ${libros.go}<br/>
         
