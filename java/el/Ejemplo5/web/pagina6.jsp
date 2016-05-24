@@ -17,9 +17,9 @@
         <h1>${numero2 = 3.7; ""}</h1>
         <h1>${numero3 = numero1}</h1>
         <h1>${resultado =numero1*numero2; numero1 +=" * "+= numero2 += " = "+=resultado}</h1>
-        <h1>${a = "mundo"}</h1>
+        <h1>${a = 5}</h1>
         <h1>${b = "hola"}</h1>
         <h1>${c = a}</h1>
-        <h1>${a == b ? "verdadero" : "falso"}</h1>
+        <h1>${(a mod 2)== 0 ? "par" : "impar"}</h1>
     </body>
 </html>
