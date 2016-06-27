@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListTipoDocumentoTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListTipoDocumentoEmpty}" rendered="#{tipoDocumentoController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{tipoDocumentoController.items.rowCount > 0}">
+                    <h:outputText value="#{tipoDocumentoController.pagination.pageFirstItem + 1}..#{tipoDocumentoController.pagination.pageLastItem + 1}/#{tipoDocumentoController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{tipoDocumentoController.previous}" value="#{bundle.Previous} #{tipoDocumentoController.pagination.pageSize}" rendered="#{tipoDocumentoController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{tipoDocumentoController.next}" value="#{bundle.Next} #{tipoDocumentoController.pagination.pageSize}" rendered="#{tipoDocumentoController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{tipoDocumentoController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTipoDocumentoTitle_tipoDocumento}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.tipoDocumento}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTipoDocumentoTitle_descripcion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.descripcion}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListTipoDocumentoTitle_estado}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.estado}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{tipoDocumentoController.prepareView}" value="#{bundle.ListTipoDocumentoViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tipoDocumentoController.prepareEdit}" value="#{bundle.ListTipoDocumentoEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{tipoDocumentoController.destroy}" value="#{bundle.ListTipoDocumentoDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{tipoDocumentoController.prepareCreate}" value="#{bundle.ListTipoDocumentoCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListTipoDocumentoIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

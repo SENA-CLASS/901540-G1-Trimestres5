@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewCuentaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewCuentaLabel_cuentaPK_numeroDocumento}"/>
+                    <h:outputText value="#{cuentaController.selected.cuentaPK.numeroDocumento}" title="#{bundle.ViewCuentaTitle_cuentaPK_numeroDocumento}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_primerNombre}"/>
+                    <h:outputText value="#{cuentaController.selected.primerNombre}" title="#{bundle.ViewCuentaTitle_primerNombre}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_segundoNombre}"/>
+                    <h:outputText value="#{cuentaController.selected.segundoNombre}" title="#{bundle.ViewCuentaTitle_segundoNombre}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_primerApellido}"/>
+                    <h:outputText value="#{cuentaController.selected.primerApellido}" title="#{bundle.ViewCuentaTitle_primerApellido}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_segundoApellido}"/>
+                    <h:outputText value="#{cuentaController.selected.segundoApellido}" title="#{bundle.ViewCuentaTitle_segundoApellido}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_foto}"/>
+                    <h:outputText value="#{cuentaController.selected.foto}" title="#{bundle.ViewCuentaTitle_foto}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_fechaTerminacion}"/>
+                    <h:outputText value="#{cuentaController.selected.fechaTerminacion}" title="#{bundle.ViewCuentaTitle_fechaTerminacion}">
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_estado}"/>
+                    <h:outputText value="#{cuentaController.selected.estado}" title="#{bundle.ViewCuentaTitle_estado}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_cargoidCargo}"/>
+                    <h:outputText value="#{cuentaController.selected.cargoidCargo}" title="#{bundle.ViewCuentaTitle_cargoidCargo}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_tipoDocumento}"/>
+                    <h:outputText value="#{cuentaController.selected.tipoDocumento}" title="#{bundle.ViewCuentaTitle_tipoDocumento}"/>
+                    <h:outputText value="#{bundle.ViewCuentaLabel_usuario}"/>
+                    <h:outputText value="#{cuentaController.selected.usuario}" title="#{bundle.ViewCuentaTitle_usuario}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{cuentaController.destroyAndView}" value="#{bundle.ViewCuentaDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewCuentaEditLink}"/>
+                <br />
+                <h:commandLink action="#{cuentaController.prepareCreate}" value="#{bundle.ViewCuentaCreateLink}" />
+                <br />
+                <h:commandLink action="#{cuentaController.prepareList}" value="#{bundle.ViewCuentaShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewCuentaIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

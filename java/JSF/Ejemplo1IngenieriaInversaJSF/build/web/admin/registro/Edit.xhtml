@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditRegistroTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditRegistroLabel_idRegistro}" for="idRegistro" />
+                    <h:inputText id="idRegistro" value="#{registroController.selected.idRegistro}" title="#{bundle.EditRegistroTitle_idRegistro}" required="true" requiredMessage="#{bundle.EditRegistroRequiredMessage_idRegistro}"/>
+                    <h:outputLabel value="#{bundle.EditRegistroLabel_fechaIngreso}" for="fechaIngreso" />
+                    <h:inputText id="fechaIngreso" value="#{registroController.selected.fechaIngreso}" title="#{bundle.EditRegistroTitle_fechaIngreso}" required="true" requiredMessage="#{bundle.EditRegistroRequiredMessage_fechaIngreso}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRegistroLabel_fehcaSalida}" for="fehcaSalida" />
+                    <h:inputText id="fehcaSalida" value="#{registroController.selected.fehcaSalida}" title="#{bundle.EditRegistroTitle_fehcaSalida}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditRegistroLabel_cargoIngreso}" for="cargoIngreso" />
+                    <h:inputText id="cargoIngreso" value="#{registroController.selected.cargoIngreso}" title="#{bundle.EditRegistroTitle_cargoIngreso}" required="true" requiredMessage="#{bundle.EditRegistroRequiredMessage_cargoIngreso}"/>
+                    <h:outputLabel value="#{bundle.EditRegistroLabel_descripcionIngreso}" for="descripcionIngreso" />
+                    <h:inputText id="descripcionIngreso" value="#{registroController.selected.descripcionIngreso}" title="#{bundle.EditRegistroTitle_descripcionIngreso}" required="true" requiredMessage="#{bundle.EditRegistroRequiredMessage_descripcionIngreso}"/>
+                    <h:outputLabel value="#{bundle.EditRegistroLabel_cuenta}" for="cuenta" />
+                    <h:selectOneMenu id="cuenta" value="#{registroController.selected.cuenta}" title="#{bundle.EditRegistroTitle_cuenta}" required="true" requiredMessage="#{bundle.EditRegistroRequiredMessage_cuenta}">
+                        <f:selectItems value="#{cuentaController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{registroController.update}" value="#{bundle.EditRegistroSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditRegistroViewLink}"/>
+                <br />
+                <h:commandLink action="#{registroController.prepareList}" value="#{bundle.EditRegistroShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditRegistroIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

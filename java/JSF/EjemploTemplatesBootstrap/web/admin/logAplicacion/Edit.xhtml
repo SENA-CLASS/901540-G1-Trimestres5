@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="LogAplicacionEditDlg" widgetVar="LogAplicacionEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditLogAplicacionTitle}">
+            <h:form id="LogAplicacionEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{logAplicacionController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditLogAplicacionLabel_idlogAplicacion}" for="idlogAplicacion" />
+                        <p:inputText id="idlogAplicacion" value="#{logAplicacionController.selected.idlogAplicacion}" title="#{bundle.EditLogAplicacionTitle_idlogAplicacion}" required="true" requiredMessage="#{bundle.EditLogAplicacionRequiredMessage_idlogAplicacion}"/>
+                        <p:outputLabel value="#{bundle.EditLogAplicacionLabel_nivel}" for="nivel" />
+                        <p:inputText id="nivel" value="#{logAplicacionController.selected.nivel}" title="#{bundle.EditLogAplicacionTitle_nivel}" />
+                        <p:outputLabel value="#{bundle.EditLogAplicacionLabel_mensaje}" for="mensaje" />
+                        <p:inputText id="mensaje" value="#{logAplicacionController.selected.mensaje}" title="#{bundle.EditLogAplicacionTitle_mensaje}" />
+                        <p:outputLabel value="#{bundle.EditLogAplicacionLabel_log}" for="log" />
+                        <p:inputText id="log" value="#{logAplicacionController.selected.log}" title="#{bundle.EditLogAplicacionTitle_log}" />
+                        <p:outputLabel value="#{bundle.EditLogAplicacionLabel_hora}" for="hora" />
+                        <p:calendar id="hora" pattern="MM/dd/yyyy HH:mm:ss" value="#{logAplicacionController.selected.hora}" title="#{bundle.EditLogAplicacionTitle_hora}"  showOn="button"/>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{logAplicacionController.update}" value="#{bundle.Save}" update="display,:LogAplicacionListForm:datalist,:growl" oncomplete="handleSubmit(args, 'LogAplicacionEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="LogAplicacionEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

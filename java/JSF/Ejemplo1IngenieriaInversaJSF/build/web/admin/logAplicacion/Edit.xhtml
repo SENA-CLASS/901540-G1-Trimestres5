@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditLogAplicacionTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditLogAplicacionLabel_idlogAplicacion}" for="idlogAplicacion" />
+                    <h:inputText id="idlogAplicacion" value="#{logAplicacionController.selected.idlogAplicacion}" title="#{bundle.EditLogAplicacionTitle_idlogAplicacion}" required="true" requiredMessage="#{bundle.EditLogAplicacionRequiredMessage_idlogAplicacion}"/>
+                    <h:outputLabel value="#{bundle.EditLogAplicacionLabel_nivel}" for="nivel" />
+                    <h:inputText id="nivel" value="#{logAplicacionController.selected.nivel}" title="#{bundle.EditLogAplicacionTitle_nivel}" />
+                    <h:outputLabel value="#{bundle.EditLogAplicacionLabel_mensaje}" for="mensaje" />
+                    <h:inputText id="mensaje" value="#{logAplicacionController.selected.mensaje}" title="#{bundle.EditLogAplicacionTitle_mensaje}" />
+                    <h:outputLabel value="#{bundle.EditLogAplicacionLabel_log}" for="log" />
+                    <h:inputText id="log" value="#{logAplicacionController.selected.log}" title="#{bundle.EditLogAplicacionTitle_log}" />
+                    <h:outputLabel value="#{bundle.EditLogAplicacionLabel_hora}" for="hora" />
+                    <h:inputText id="hora" value="#{logAplicacionController.selected.hora}" title="#{bundle.EditLogAplicacionTitle_hora}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:inputText>
+                </h:panelGrid>
+                <h:commandLink action="#{logAplicacionController.update}" value="#{bundle.EditLogAplicacionSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditLogAplicacionViewLink}"/>
+                <br />
+                <h:commandLink action="#{logAplicacionController.prepareList}" value="#{bundle.EditLogAplicacionShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditLogAplicacionIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

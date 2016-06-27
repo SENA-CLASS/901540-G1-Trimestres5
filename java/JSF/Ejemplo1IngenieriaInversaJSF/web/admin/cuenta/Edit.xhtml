@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditCuentaTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_cuentaPK_numeroDocumento}" for="cuentaPK_numeroDocumento" />
+                    <h:inputText id="cuentaPK_numeroDocumento" value="#{cuentaController.selected.cuentaPK.numeroDocumento}" title="#{bundle.EditCuentaTitle_cuentaPK_numeroDocumento}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_cuentaPK_numeroDocumento}"/>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_primerNombre}" for="primerNombre" />
+                    <h:inputText id="primerNombre" value="#{cuentaController.selected.primerNombre}" title="#{bundle.EditCuentaTitle_primerNombre}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_primerNombre}"/>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_segundoNombre}" for="segundoNombre" />
+                    <h:inputText id="segundoNombre" value="#{cuentaController.selected.segundoNombre}" title="#{bundle.EditCuentaTitle_segundoNombre}" />
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_primerApellido}" for="primerApellido" />
+                    <h:inputText id="primerApellido" value="#{cuentaController.selected.primerApellido}" title="#{bundle.EditCuentaTitle_primerApellido}" />
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_segundoApellido}" for="segundoApellido" />
+                    <h:inputText id="segundoApellido" value="#{cuentaController.selected.segundoApellido}" title="#{bundle.EditCuentaTitle_segundoApellido}" />
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_foto}" for="foto" />
+                    <h:inputTextarea rows="4" cols="30" id="foto" value="#{cuentaController.selected.foto}" title="#{bundle.EditCuentaTitle_foto}" />
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_fechaTerminacion}" for="fechaTerminacion" />
+                    <h:inputText id="fechaTerminacion" value="#{cuentaController.selected.fechaTerminacion}" title="#{bundle.EditCuentaTitle_fechaTerminacion}" >
+                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                    </h:inputText>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_estado}" for="estado" />
+                    <h:inputText id="estado" value="#{cuentaController.selected.estado}" title="#{bundle.EditCuentaTitle_estado}" />
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_cargoidCargo}" for="cargoidCargo" />
+                    <h:selectOneMenu id="cargoidCargo" value="#{cuentaController.selected.cargoidCargo}" title="#{bundle.EditCuentaTitle_cargoidCargo}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_cargoidCargo}">
+                        <f:selectItems value="#{cargoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_tipoDocumento}" for="tipoDocumento" />
+                    <h:selectOneMenu id="tipoDocumento" value="#{cuentaController.selected.tipoDocumento}" title="#{bundle.EditCuentaTitle_tipoDocumento}" required="true" requiredMessage="#{bundle.EditCuentaRequiredMessage_tipoDocumento}">
+                        <f:selectItems value="#{tipoDocumentoController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditCuentaLabel_usuario}" for="usuario" />
+                    <h:selectOneMenu id="usuario" value="#{cuentaController.selected.usuario}" title="#{bundle.EditCuentaTitle_usuario}" >
+                        <f:selectItems value="#{usuarioController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{cuentaController.update}" value="#{bundle.EditCuentaSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditCuentaViewLink}"/>
+                <br />
+                <h:commandLink action="#{cuentaController.prepareList}" value="#{bundle.EditCuentaShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditCuentaIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

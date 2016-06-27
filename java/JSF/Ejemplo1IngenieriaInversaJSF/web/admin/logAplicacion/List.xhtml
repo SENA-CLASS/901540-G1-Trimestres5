@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ListLogAplicacionTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:form styleClass="jsfcrud_list_form">
+                <h:panelGroup id="messagePanel" layout="block">
+                    <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+                </h:panelGroup>
+                <h:outputText escape="false" value="#{bundle.ListLogAplicacionEmpty}" rendered="#{logAplicacionController.items.rowCount == 0}"/>
+                <h:panelGroup rendered="#{logAplicacionController.items.rowCount > 0}">
+                    <h:outputText value="#{logAplicacionController.pagination.pageFirstItem + 1}..#{logAplicacionController.pagination.pageLastItem + 1}/#{logAplicacionController.pagination.itemsCount}"/>&nbsp;
+                    <h:commandLink action="#{logAplicacionController.previous}" value="#{bundle.Previous} #{logAplicacionController.pagination.pageSize}" rendered="#{logAplicacionController.pagination.hasPreviousPage}"/>&nbsp;
+                    <h:commandLink action="#{logAplicacionController.next}" value="#{bundle.Next} #{logAplicacionController.pagination.pageSize}" rendered="#{logAplicacionController.pagination.hasNextPage}"/>&nbsp;
+                    <h:dataTable value="#{logAplicacionController.items}" var="item" border="0" cellpadding="2" cellspacing="0" rowClasses="jsfcrud_odd_row,jsfcrud_even_row" rules="all" style="border:solid 1px">
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLogAplicacionTitle_idlogAplicacion}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.idlogAplicacion}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLogAplicacionTitle_nivel}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.nivel}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLogAplicacionTitle_mensaje}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.mensaje}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLogAplicacionTitle_log}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.log}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="#{bundle.ListLogAplicacionTitle_hora}"/>
+                            </f:facet>
+                            <h:outputText value="#{item.hora}">
+                                <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                            </h:outputText>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="&nbsp;"/>
+                            </f:facet>
+                            <h:commandLink action="#{logAplicacionController.prepareView}" value="#{bundle.ListLogAplicacionViewLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{logAplicacionController.prepareEdit}" value="#{bundle.ListLogAplicacionEditLink}"/>
+                            <h:outputText value=" "/>
+                            <h:commandLink action="#{logAplicacionController.destroy}" value="#{bundle.ListLogAplicacionDestroyLink}"/>
+                        </h:column>
+                    </h:dataTable>
+                </h:panelGroup>
+                <br />
+                <h:commandLink action="#{logAplicacionController.prepareCreate}" value="#{bundle.ListLogAplicacionCreateLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ListLogAplicacionIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewRegistroTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewRegistroLabel_idRegistro}"/>
+                    <h:outputText value="#{registroController.selected.idRegistro}" title="#{bundle.ViewRegistroTitle_idRegistro}"/>
+                    <h:outputText value="#{bundle.ViewRegistroLabel_fechaIngreso}"/>
+                    <h:outputText value="#{registroController.selected.fechaIngreso}" title="#{bundle.ViewRegistroTitle_fechaIngreso}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewRegistroLabel_fehcaSalida}"/>
+                    <h:outputText value="#{registroController.selected.fehcaSalida}" title="#{bundle.ViewRegistroTitle_fehcaSalida}">
+                        <f:convertDateTime pattern="MM/dd/yyyy HH:mm:ss" />
+                    </h:outputText>
+                    <h:outputText value="#{bundle.ViewRegistroLabel_cargoIngreso}"/>
+                    <h:outputText value="#{registroController.selected.cargoIngreso}" title="#{bundle.ViewRegistroTitle_cargoIngreso}"/>
+                    <h:outputText value="#{bundle.ViewRegistroLabel_descripcionIngreso}"/>
+                    <h:outputText value="#{registroController.selected.descripcionIngreso}" title="#{bundle.ViewRegistroTitle_descripcionIngreso}"/>
+                    <h:outputText value="#{bundle.ViewRegistroLabel_cuenta}"/>
+                    <h:outputText value="#{registroController.selected.cuenta}" title="#{bundle.ViewRegistroTitle_cuenta}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{registroController.destroyAndView}" value="#{bundle.ViewRegistroDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewRegistroEditLink}"/>
+                <br />
+                <h:commandLink action="#{registroController.prepareCreate}" value="#{bundle.ViewRegistroCreateLink}" />
+                <br />
+                <h:commandLink action="#{registroController.prepareList}" value="#{bundle.ViewRegistroShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewRegistroIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
